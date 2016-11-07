@@ -1,0 +1,34 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="CSS/style.css">
+</head>
+
+<title>How to open at a specific line</title>
+
+<body>
+<a href="vim-toc.html">Table of Contents</a>
+<h1>Overview</h1>
+<p>Sometimes you may be working on a file that is hundreds or possibly thousands of lines long.</p>
+<p>It's not practical to scroll down a file to a specific line. In vim, you can open the file at that exact line number and begin working.</p>
+
+
+<h1>Opening a file at a specific line number</h1>
+<ol>
+<li>First, cut 'cat' to find which line in the file you need to open. For example, let's say you're looking for the word 'California'. Run the following to view which line of the file it is on:
+<div class="preboxcontainer">
+<pre class="prebox">
+<span class="server">[server]$ </span><span class="command">cat -n filename | grep -i "California"</span>
+<span class="cmdoutput">          1237 California became a state in the year 1850</span></pre></div></li>
+<li>From the output you can see you need to jump to line #1237. Open the file in vim like this:
+<div class="preboxcontainer">
+<pre class="prebox">
+<span class="server">[server]$ </span><span class="command">vim +1237 filename</span></pre></div></li>
+<li>If necessary, you can view the line numbers in the file by running this in vim:
+<div class="preboxcontainer">
+<pre class="prebox">
+<span class="server">[server]$ </span><span class="command">:set nu!</span></pre></div></li>
+</ol>
+<p>You can now edit the file in vim and save changes from this specific line number.</p>
+</body>
+</html>

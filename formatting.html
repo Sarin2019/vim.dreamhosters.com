@@ -1,0 +1,26 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="CSS/style.css">
+</head>
+
+<title>Formatting a file</title>
+
+<body>
+<a href="vim-toc.html">Table of Contents</a>
+<h1>Overview</h1>
+<p>vim offers several tools to format the file you're working on. One example is that you can set it to only allow lines to be a certain amount of characters.</p>
+
+<h1>Setting each line to allow a specific amount of characters</h1>
+<p>Let's say you need all lines in your file to never exceed 80 characters. This example shows how to set the word-wrapping variable.</p>
+<ol>
+<li>Open the file in vim.</li>
+<li>While still in COMMAND mode, enter the following:
+<div class="preboxcontainer">
+<pre class="prebox">
+<span class="server">[server]$ </span><span class="command">:set tw=80</span></pre></div></li>
+<li>Click 'ENTER'.</li>
+</ol>
+<p>When you edit the file now, all lines will cap at 80 characters.</p>
+</body>
+</html>

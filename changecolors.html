@@ -1,0 +1,171 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="CSS/style.css">
+</head>
+
+<title>Chaning colors</title>
+<!-- comments here -->
+<body>
+<a href="vim-toc.html">Table of Contents</a>
+
+
+
+<h1>How to change specific colors</h1>
+<p>You can change specific colors in your theme by using the <code>highlight</code> command.</p>
+<p>The general syntax is <code>highlight Group OutputDevice fontkey = value</code>
+<p>For example:
+<div class="preboxcontainer">
+<pre class="prebox">highlight Comment ctermbg=DarkGray</span></pre></div>
+<span class="Note">Notice that the 'OutputDevice' (cterm) and 'fontkey'(bg) are combined together.</span>
+
+<h1>Terminology</h1>
+<p>When running <code>highlight</code> you'll need to specify a few things. Below are a few explanations of the shorthand code used:</p>
+<h2>Groups</h2>
+<p>These are the most common output groups used:</p>
+<table class="noborder" cellpadding=5px>
+
+<tr>
+ <td><code>Normal</code></td>
+ <td>Refers to all normal text</td>
+</tr>
+
+<tr>
+ <td><code>Comment</code></td>
+ <td>Comments within a program</td>
+</tr>
+<tr>
+ <td><code>Constant</code></td>
+ <td>Program constants, such as numbers, quoted strings, or true/false</td>
+</tr>
+<tr>
+ <td><code>Identifier</code></td>
+ <td>Variable identifier names. HTML tag color.</td>
+</tr>
+<tr>
+ <td><code>Title</code></td>
+ <td>HTML header text color</td>
+</tr>
+<tr>
+ <td><code>Statement</code></td>
+ <td>A programming language statement, usually a keyword like "if" or
+    "while"</td>
+</tr>
+<tr>
+ <td><code>PreProc</code></td>
+ <td>A preprocessor, such as "#include" in C</td>
+</tr>
+<tr>
+ <td><code>Type</code></td>
+ <td>A variable datatype, such as "int"</td>
+</tr>
+<tr>
+ <td><code>Special</code></td>
+ <td>A special symbol, usually used for special characters like "\n" in
+    strings</td>
+</tr>
+<tr>
+ <td><code>Underlined</code></td>
+ <td>Text that should be underlined</td>
+</tr>
+<tr>
+ <td><code>Error</code></td>
+ <td>Text which contains a programming language error</td>
+</tr>
+</table>
+
+
+
+<h2>Output Device</h2>
+<p>There are three types of output devices. The most common two are shown below with their optional values.</p>
+<table class="noborder" cellpadding=5px>
+
+<tr>
+ <th>Output Device</th>
+ <th>Explanation</th>
+ <th>Possible values</th>
+</tr>
+<tr>
+ <td><code>cterm</code></td>
+ <td>Color terminal</td>
+ <td>bold, underline, reverse, italic, none</td>
+</tr>
+<tr>
+ <td><code>gui</code></td>
+ <td>GUI terminal</td>
+ <td>bold, underline, reverse, italic, none</td>
+</tr>
+<tr>
+</table>
+<p>There's also an option (<code>term</code>) for black and white only terminals.</p>
+
+
+<h2>Font keys and their values</h2>
+<p>These control what part of the selected text is altered:</p>
+table here
+<table class="noborder" cellpadding=5px>
+
+<tr>
+ <th>Font Key</th>
+ <th>Explanation</th>
+ <th>Possible values in cterm</th>
+ <th>Possible values in gui</th>
+</tr>
+<tr>
+ <td><code>fg</code></td>
+ <td>Foreground. Applies to text.</td>
+ <td>White, Black, Blue, LightBlue, DarkBlue, Green, LightGreen, DarkGreen, Cyan, LightCyan, DarkCyan, Red, LightRed, DarkRed, Magenta, LightMagenta, DarkMagenta, Brown, Yellow, LightYellow, DarkYellow, Gray, Grey, LightGray, LightGrey, DarkGray, DarkGrey</td>
+ <td>All colors allowed in cterm. You can also use HEX color format.</td>
+</tr>
+<tr>
+ <td><code>bg</code></td>
+ <td>Background. Applies ot the background highlight color.</td>
+ <td>White, Black, Blue, LightBlue, DarkBlue, Green, LightGreen, DarkGreen, Cyan, LightCyan, DarkCyan, Red, LightRed, DarkRed, Magenta, LightMagenta, DarkMagenta, Brown, Yellow, LightYellow, DarkYellow, Gray, Grey, LightGray, LightGrey, DarkGray, DarkGrey</td>
+ <td>All colors allowed in cterm. You can also use HEX color format.</td>
+</tr>
+<tr>
+</table>
+
+
+<h1>Examples</h1>
+<h2>Change the background and foreground color of all comments</h2>
+<p>This changes the background and foreground color of all comments in the entire document:</p>
+<div class="preboxcontainer">
+<pre class="prebox"><span class="command">:highlight Comment ctermbg=DarkGray ctermfg=Black
+:syntax enable</span></pre></div>
+<p>The <code>:syntax enable</code> command may be needed to get the colors to show.</p>
+</body>
+</html>
+
+<h2>Change the foreground color of text</h2>
+<p>This changes the normal text color in your document:</p>
+<div class="preboxcontainer">
+<pre class="prebox"><span class="command">highlight Normal ctermfg=White guifg=#FFFFFF</span></pre></div>
+<span class="Note">Notice how you can add both cterm and gui statements in the same line.</span>
+
+<h1>Adding your customizations to the .vimrc file</h1>
+<p>You can add your changes directly into a .vimrc file the same way you typed them. This will allow the settings to load every time you open a file.
+
+<ol>
+<li>Navigate to your user's home directory:
+<div class="preboxcontainer">
+<pre class="prebox"><span class="server">[server]$ </span><span class="command">cd $HOME</span></pre></div></li>
+<li>Create a file named <span class="file">.vimrc</span>
+<div class="preboxcontainer">
+<pre class="prebox"><span class="server">[server]$ </span><span class="command">touch .vimrc</span></pre></div></li>
+<li>In that file add you customizations. For example:
+<div class="preboxcontainer">
+<pre class="prebox">color delek
+syntax on
+
+highlight Comment ctermfg=Green
+highlight Normal ctermfg=White guifg=#FFFFFF</span></pre></div></li>
+</ol>
+
+<h1>See also</h1>
+<ul>
+<li>http://alvinalexander.com/linux/vi-vim-editor-color-scheme-syntax</li>
+<li>http://andrewradev.com/2011/08/06/making-vim-pretty-with-custom-colors/</li>
+<li>https://www.sbf5.com/~cduan/technical/vi/vi-4.shtml</li>
+</body>
+</html>

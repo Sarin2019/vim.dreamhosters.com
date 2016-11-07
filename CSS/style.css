@@ -1,0 +1,127 @@
+body {
+    background-color: #000000;
+    color: #D8D8D8;
+}
+
+a:link {
+    color: #7D7DFE;
+}
+
+a:visited {
+    color: green;
+}
+
+a:hover {
+    color: red;
+}
+
+a:active {
+    color: blue;
+}
+
+h1 {
+//  text-decoration: underline;
+  font-size: 30px;
+  margin-top: 35px;
+  margin-bottom: 5px;
+
+  padding: 5px 0px;
+}
+
+h2 {
+  font-size: 22px;
+}
+
+ul {
+  margin-left: 20px;
+}
+
+strong {
+  color: #FFFFFF;
+}
+
+table, th, td {
+   border: 1px dashed #424242;
+}
+
+code {
+  color: #08FF00;
+  font-size: 16px;
+}
+
+
+/*Custom classes*/
+.h2section {
+  margin-left: 40px;
+}
+
+.tocheader {
+  font-size: 4em;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+.note {
+  background-color: #000000;
+  color: #7DFDFE;
+  border: 1px solid #7DFDFE;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0 0 8px 1px #7DFDFE inset;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: #08FF00;
+}
+
+.file {
+  color: #FE9A2E;
+}
+
+.noborder {
+  border-collapse: collapse;
+  border: 0px;
+}
+
+
+
+/*Preformatted boxes*/
+.preboxcontainer {
+  max-width: 940px;
+  background: #000000;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+pre.prebox {
+  border: 1px solid #424242;
+  background: #000000;
+  max-width: 940px;
+  overflow-x: auto;
+  color: #B6B6B4;
+  white-space: pre;
+  word-wrap: normal;
+  padding: 8 15px;
+  line-height: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px 1px inset;
+ }
+
+.server {
+  color:#7DFDFE;
+}
+
+.command {
+  color:white;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+
+.cmdoutput {
+  color:#B6B6B4;
+}

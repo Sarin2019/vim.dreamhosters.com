@@ -1,0 +1,68 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="CSS/style.css">
+</head>
+
+<title>Changing your theme</title>
+
+<body>
+<a href="vim-toc.html">Table of Contents</a>
+<h1>How to change your theme</h1>
+<ol>
+<li>First, check your system for a list of themes already installed. If you're using OS X or Linux, it's most likely in the following directory:
+<div class="preboxcontainer">
+<pre class="prebox">
+<span class="server">[server]$ </span><span class="command">/usr/share/vim/vim73/colors</span></pre></div>
+<span class="note">NOTE: The /vim73 directory could be a different number such as vim72.</span></li>
+<br>
+<li>Run the following to see the full list in your system:
+<div class="preboxcontainer">
+<pre class="prebox">
+<span class="server">[server]$ </span><span class="command">ls -la /usr/share/vim/vim73/colors</span>
+<span class="cmdoutput">total 80
+drwxr-xr-x  2 root root 4096 Oct 12  2014 .
+drwxr-xr-x 17 root root 4096 Oct 12  2014 ..
+-rw-r--r--  1 root root 2476 May  3  2012 blue.vim
+-rw-r--r--  1 root root 2990 May  3  2012 darkblue.vim
+-rw-r--r--  1 root root  548 May  3  2012 default.vim
+-rw-r--r--  1 root root 2399 May  3  2012 delek.vim
+-rw-r--r--  1 root root 2812 May  3  2012 desert.vim
+-rw-r--r--  1 root root 1666 May  3  2012 elflord.vim
+-rw-r--r--  1 root root 2476 May  3  2012 evening.vim
+-rw-r--r--  1 root root 3306 May  3  2012 koehler.vim
+-rw-r--r--  1 root root 2460 May  3  2012 morning.vim
+-rw-r--r--  1 root root 2006 May  3  2012 murphy.vim
+-rw-r--r--  1 root root 1037 May  3  2012 pablo.vim
+-rw-r--r--  1 root root 2673 May  3  2012 peachpuff.vim
+-rw-r--r--  1 root root 2311 May  3  2012 README.txt
+-rw-r--r--  1 root root 1239 May  3  2012 ron.vim
+-rw-r--r--  1 root root 2720 May  3  2012 shine.vim
+-rw-r--r--  1 root root 2445 May  3  2012 slate.vim
+-rw-r--r--  1 root root 1629 May  3  2012 torte.vim
+-rw-r--r--  1 root root 1840 May  3  2012 zellner.vim</span></pre></div>
+</li>
+<li>Make a note of all the themes.</li>
+<li>Open your file in vim.</li>
+<li>Run the following to view what each theme looks like:
+<div class="preboxcontainer">
+<pre class="prebox">
+<span class="server">[server]$ </span><span class="command">:colorscheme delek</span></pre></div></li>
+<li>Just change the theme name each time.</li>
+<li>Navigate to your user's home directory:
+<div class="preboxcontainer">
+<pre class="prebox">
+<span class="server">[server]$ </span><span class="command">cd $HOME</span></pre></div></li>
+<li>Create a file named <span class="file">.vimrc</span>.</li>
+<li>In that file add the following line, just change your themename:
+<div class="preboxcontainer">
+<pre class="prebox">color delek
+syntax on</pre></div></li>
+<li>When you now open a file in vim, the theme is automatically applied.</li>
+
+
+</ol>
+
+
+</body>
+</html>
